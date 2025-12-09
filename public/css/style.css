@@ -1,0 +1,230 @@
+/* ===========================
+   GLOBAL RESET & THEME
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0e0e0e;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ===========================
+   HEADER
+   =========================== */
+.site-header {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-link {
+  color: #ddd;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffd400;
+}
+
+/* Admin/User name */
+.header-user {
+  color: #ffd400;
+  font-weight: 600;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn.primary {
+  background: #ffd400;
+  color: #111;
+}
+
+.btn.primary:hover {
+  background: #ffe34d;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: #ffd400;
+  border: 1px solid rgba(255, 212, 0, 0.3);
+}
+
+.btn.ghost:hover {
+  border-color: #ffd400;
+}
+
+/* ===========================
+   PANEL (PAGE CONTAINER)
+   =========================== */
+.panel {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 14px;
+  margin: 30px auto;
+  width: 92%;
+  max-width: 1100px;
+}
+
+/* ===========================
+   PRODUCT GRID
+   =========================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+/* Product Card */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ===========================
+   PERFECT SQUARE PRODUCT IMAGE
+   =========================== */
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #000;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+/* On hover scale slightly */
+.card:hover img {
+  transform: scale(1.03);
+}
+
+/* ===========================
+   PRODUCT TEXT
+   =========================== */
+.card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  color: #ddd;
+}
+
+/* ===========================
+   MODAL (ADMIN ONLY POPUP)
+   =========================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 24px;
+  width: 92%;
+  max-width: 480px;
+  color: #fff;
+}
+
+.modal h3 {
+  color: #ffd400;
+  margin-bottom: 8px;
+}
+
+.modal p {
+  color: #ddd;
+  margin-bottom: 18px;
+}
+
+.modal .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* ===========================
+   FORMS
+   =========================== */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  color: #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* ===========================
+   MOBILE
+   =========================== */
+@media(max-width: 780px) {
+  .nav-links { display: none; }
+}
